@@ -60,15 +60,8 @@ def load_config():
 
 def create_payload(model, prompt, target="ollama", **kwargs):
     """
-    Create the Request Payload in the format required byt the Model Server
-    @NOTE: 
-    Need to adjust here to support multiple target formats
-    target can be only ('ollama' or 'open-webui')
-
-    @TODO it should be able to self_discover the target Model Server
-    [Issue 1](https://github.com/genilab-fau/prompt-eng/issues/1)
+    @NOTE: Need to adjust here to support multiple target formats
     """
-
     payload = None
     if target == "ollama":
         payload = {
@@ -78,30 +71,26 @@ def create_payload(model, prompt, target="ollama", **kwargs):
         }
         if kwargs:
             payload["options"] = {key: value for key, value in kwargs.items()}
-
     elif target == "open-webui":
-        '''
-        @TODO need to verify the format for 'parameters' for 'open-webui' is correct.
-        [Issue 2](https://github.com/genilab-fau/prompt-eng/issues/2)
-        '''
         payload = {
             "model": model,
             "messages": [ {"role" : "user", "content": prompt } ]
         }
 
-        # @NOTE: Taking not of the syntaxes we tested before; none seems to work so far 
-        #payload.update({key: value for key, value in kwargs.items()})
-        #if kwargs:
-        #   payload["options"] = {key: value for key, value in kwargs.items()}
+        ## @NOTE: Need to load parameters for Open-WebUI payload
+        ###
         
+        #if kwargs:
+        #    payload["options"] = {key: value for key, value in kwargs.items()}
+    
     else:
-        print(f'!!ERROR!! Unknown target: {target}')
+        print(f'!!ERROR!! Unknown target type {target}')
     return payload
 
 
 def model_req(payload=None):
     """
-    Issue request to the Model Server
+    COMPLETE
     """
         
     # CUT-SHORT Condition
@@ -119,7 +108,7 @@ def model_req(payload=None):
     if api_key: headers["Authorization"] = f"Bearer {api_key}"
 
     #print(url, headers)
-    print(payload)
+    #print(payload)
 
     # Send out request to Model Provider
     try:
@@ -160,15 +149,45 @@ def model_req(payload=None):
 
 if __name__ == "__main__":
     from _pipeline import create_payload, model_req
-    MESSAGE = "1 + 1"
-    PROMPT = MESSAGE 
+    MESSAGE = """
+    You are an intelligent personal finance assistant. A user has provided their financial data. Your task is to analyze their income, expenses, and investments, and offer tailored advice for improving their financial situation.
+
+    Example 1:
+    User’s financial data:
+    - Monthly income: $6,000
+    - Monthly expenses: $4,000
+    - Savings goal: Save $12,000 in the next 6 months
+    - Investments: $10,000 in real estate
+
+    AI’s response:
+    - You have $2,000 in disposable income per month. Consider cutting down on unnecessary expenses (e.g., dining out) to save an additional $500 each month.
+    - You’re on track to meet your savings goal, but you can invest in a more diversified portfolio to potentially increase returns.
+
+    Example 2:
+    User’s financial data:
+    - Monthly income: $5,000
+    - Monthly expenses: $2,800
+    - Savings goal: Save $8,000 in the next 10 months
+    - Investments: $7,000 in stocks
+
+    AI’s response:
+    - You have a $1,200 surplus each month. You are in a good position to reach your savings goal early. Consider investing in bonds or diversifying your portfolio for better returns.
+
+    Now, analyze the following user's financial data and provide similar advice:
+    User’s financial data:
+    - Monthly income: $5,000
+    - Monthly expenses: $3,200 (including rent, utilities, food, etc.)
+    - Savings goal: Save $10,000 in the next 12 months
+    - Investments: $5,000 in stocks (portfolio includes 60% tech, 30% healthcare, 10% bonds)
+    """
+    PROMPT = MESSAGE
     payload = create_payload(
                          target="open-webui",   
-                         model="llama3.2:latest", 
+                         model="qwen2", 
                          prompt=PROMPT, 
                          temperature=1.0, 
-                         num_ctx=5555555, 
-                         num_predict=1)
+                         num_ctx=100, 
+                         num_predict=100)
 
     time, response = model_req(payload=payload)
     print(response)
