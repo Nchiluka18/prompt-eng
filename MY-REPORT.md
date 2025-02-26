@@ -2,12 +2,11 @@
 
 # Exploring Prompt Engineering Techniques for Automated Financial Planning
 
-1-liner description of your project
 
 This research explores various prompt engineering techniques to optimize automated financial planning, enhancing the accuracy and efficiency of AI-driven financial advisory services.
 
 
-* Authors: Neha Chiluka, Tejaswini Porachenu, Shivani Vilambi. 
+* Authors: Neha Chiluka(jchiluka2024@fau.edu), Tejaswini Porachenu(tporachenu2024@fau.edu), Shivani Vilambi(svilambi2024@fau.edu). 
 * Academic Supervisor: [Dr. Fernando Koch](http://www.fernandokoch.me)
 
   
@@ -81,8 +80,20 @@ Describe the results achieved through your research process.
 |  Self-Consistency | Most reliable responses  | Generates multiple answers to ensure accuracy, but is resource-intensive  |  3.5 - 4.5 |
 | Meta-Prompting  | Adaptive and optimized strategies  | Requires iterative refinement, but improves adaptability  |  4.0 - 5.5 |
 
+**Key Observations**
 
+- Few-Shot and Chain-of-Thought prompting performed well in structured financial planning scenarios.
+
+- Self-Consistency produced the most reliable responses but required more computational resources.
+
+- Meta-Prompting improved reasoning over iterations, making it ideal for complex financial queries.
 
 # Further research
 
-Describe what we could do next and propose new ideas for further research.
+1. Investigating automated prompt generation using LLMs.
+
+3. Enhancing AI’s ability to personalize financial advice based on user-specific goals.
+
+5. Exploring hybrid approaches that combine multiple prompt techniques for optimal performance.
+
+This research provides valuable insights into prompt engineering for financial advisory services, offering a roadmap for further innovation in AI-driven financial planning.
