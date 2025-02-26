@@ -3,7 +3,7 @@
 # !!! YOU NEED TO ADJUST THE URL TO YOUR SERVER !!!
 # !!! IF USING OPEN-WEBUI, PROVIDE TEH API_KEY !!!
 
-#URL_GENERATE=http://localhost:11434/api/generate
-URL_GENERATE=https://chat.hpc.fau.edu/api/chat/completions
-API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI4NzZlNGMwLWM4ZTgtNDhjMi1hNTY4LTA2NTc1NGJhMzc3ZSJ9.twKJzxtUi5TsTyTYO9CFuewFRn4TVg_nYS0-mcunqQk
+URL_GENERATE=http://localhost:11434/api/generate
+#URL_GENERATE=https://chat.hpc.fau.edu/api/chat/completions
+#API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI4NzZlNGMwLWM4ZTgtNDhjMi1hNTY4LTA2NTc1NGJhMzc3ZSJ9.twKJzxtUi5TsTyTYO9CFuewFRn4TVg_nYS0-mcunqQk
 
