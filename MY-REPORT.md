@@ -48,7 +48,7 @@ How can different prompt engineering techniques improve the accuracy and efficie
 
 # Research Method
 
-Experiment Setup
+**Experiment Setup**
 
 We implemented the following prompt engineering techniques to analyze their effectiveness in financial planning:
 
