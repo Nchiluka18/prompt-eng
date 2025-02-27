@@ -66,7 +66,7 @@ We implemented the following prompt engineering techniques to analyze their effe
 - **Automated Prompt Generation** – AI dynamically generates prompts based on input data to optimize response quality.
 
 
-**Model Parameters and Variations**
+#### **Model Parameters and Variations**
 
 We tested multiple models to compare their effectiveness across different prompting techniques:
 
@@ -80,17 +80,17 @@ We tested multiple models to compare their effectiveness across different prompt
 
 - **Automated Prompting:** Enabled for selected experiments
 
-**Example Prompts for Financial Planning Scenarios**
+#### **Example Prompts for Financial Planning Scenarios**
 
-**Budgeting Advice:**
+**1. Budgeting Advice:**
 
 "You are a financial advisor. A client earns $5000 monthly and has expenses of $3200. They want to save $10,000 in 12 months. Provide a financial strategy focusing on budgeting and savings."
 
-**Investment Strategy:**
+**2. Investment Strategy:**
 
 "A client has a $20,000 investment budget and is looking for low-risk options. Suggest an optimal investment portfolio based on current market conditions."
 
-**Debt Management:**
+**3. Debt Management:**
 
 "A client has a $15,000 credit card debt with a 15% interest rate. Recommend a repayment strategy while balancing other financial obligations."
 # Results
