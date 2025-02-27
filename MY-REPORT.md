@@ -49,7 +49,7 @@ How can different prompt engineering techniques improve the accuracy and efficie
 
 # Research Method
 
-**Experiment Setup**
+#### **Experiment Setup**
 
 We implemented the following prompt engineering techniques to analyze their effectiveness in financial planning:
 
@@ -95,7 +95,7 @@ We tested multiple models to compare their effectiveness across different prompt
 "A client has a $15,000 credit card debt with a 15% interest rate. Recommend a repayment strategy while balancing other financial obligations."
 # Results
 
-Comparison of Prompting Techniques Across Models.
+#### Comparison of Prompting Techniques Across Models.
 
 | Technique  | Strengths  | Observations & Considerations  | Avg Response Time (s) (Qwen2 / Phi-4 / LLaVA)  |
 | ------------ | ------------ | ------------ | ------------ |
@@ -107,7 +107,7 @@ Comparison of Prompting Techniques Across Models.
 | Automated Prompting | Dynamically optimized prompts | Can lead to variable results depending on data input and model behavior  |  2.5 - 3.5 / 2.2 - 3.0 / 2.8 - 4.0 |
 
 
-**Key Observations**
+#### **Key Observations**
 
 - Few-Shot and Chain-of-Thought prompting performed well in structured financial planning scenarios.
 
@@ -118,8 +118,6 @@ Comparison of Prompting Techniques Across Models.
 - **Automated Prompting showed promise but required further fine-tuning to ensure consistency across different scenarios.**
 
 - Phi-4 demonstrated faster response times compared to Qwen2 and LLaVA, while LLaVA produced more detailed and structured outputs but at the cost of latency.
-
-
 
 # Further research
 
