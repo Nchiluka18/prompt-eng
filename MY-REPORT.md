@@ -6,7 +6,8 @@
 This research explores various prompt engineering techniques to optimize automated financial planning, enhancing the accuracy and efficiency of AI-driven financial advisory services.
 
 
-* Authors: Neha Chiluka(jchiluka2024@fau.edu), Tejaswini Porachenu(tporachenu2024@fau.edu), Shivani Vilambi(svilambi2024@fau.edu). 
+* Authors: Neha Chiluka(jchiluka2024@fau.edu), Tejaswini Porachenu(tporachenu2024@fau.edu), Shivani Vilambi(svilambi2024@fau.edu).
+  
 * Academic Supervisor: [Dr. Fernando Koch](http://www.fernandokoch.me)
 
   
